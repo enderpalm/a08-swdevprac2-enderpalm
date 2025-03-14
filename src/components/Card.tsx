@@ -5,7 +5,7 @@ import { Rating } from "@mui/material";
 interface Props {
   venueName: string;
   imgSrc: string;
-  onRatingChange: Function;
+  onRatingChange?: Function;
 }
 
 export default function Card({ venueName, imgSrc, onRatingChange }: Props) {
@@ -28,8 +28,8 @@ export default function Card({ venueName, imgSrc, onRatingChange }: Props) {
           data-testid={robotId}
           defaultValue={0}
           precision={1}
-          onClick={(event) => event.stopPropagation()}
-          onChange={(_, value) => onRatingChange(venueName, value)}
+          onClick={onRatingChange && ((event) => event.stopPropagation())}
+          onChange={onRatingChange && ((_, value) => onRatingChange(venueName, value))}
         />
       </div>
     </InteractiveCard>

@@ -1,4 +1,4 @@
-export default async function getVenues() {
+export default async function getVenues(): Promise<VenueJson> {
     return new Promise((resolve, reject) => {
         setTimeout(async () => {
             const response = await fetch('https://a08-venue-explorer-backend.vercel.app/api/v1/venues');

@@ -36,7 +36,6 @@ export default function Banner() {
         onClick={(e) => {
           e.stopPropagation();
           router.push("/venue");
-          router.
         }}
         className="absolute bottom-4 right-4 py-2 px-4 rounded-lg text-white font-jetbrains bg-[rgba(255,255,255,0.1)] backdrop-blur-sm backdrop-saturate-100 border-solid border-[1px] border-[rgba(255,255,255,0.2)] hover:border-[3px] transition-all duration-75"
       >
