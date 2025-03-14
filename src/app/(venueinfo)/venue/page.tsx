@@ -1,4 +1,5 @@
-import CardPanel from "@/components/CardPanel";
+"use client";
+
 import VenueCatalog from "@/components/VenueCatalog";
 import getVenues from "@/libs/getVenues";
 import { LinearProgress } from "@mui/material";
@@ -9,7 +10,14 @@ const VenuesPage = () => {
 
   return (
     <main>
-      <Suspense fallback={<p>Loading...<LinearProgress/></p>}>
+      <Suspense
+        fallback={
+          <p>
+            Loading...
+            <LinearProgress />
+          </p>
+        }
+      >
         <VenueCatalog venuesJson={venuesPromise} />
       </Suspense>
     </main>
