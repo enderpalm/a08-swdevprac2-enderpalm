@@ -22,7 +22,7 @@ export default function Card({ venueName, imgSrc, onRatingChange }: Props) {
       </div>
       <div className="m-4 flex-col flex gap-2">
         <h2 className="font-anuphan font-semibold">{venueName}</h2>
-        <Rating
+        {/* <Rating
           id={robotId}
           name={robotId}
           data-testid={robotId}
@@ -30,7 +30,7 @@ export default function Card({ venueName, imgSrc, onRatingChange }: Props) {
           precision={1}
           onClick={onRatingChange && ((event) => event.stopPropagation())}
           onChange={onRatingChange && ((_, value) => onRatingChange(venueName, value))}
-        />
+        /> */}
       </div>
     </InteractiveCard>
   );
